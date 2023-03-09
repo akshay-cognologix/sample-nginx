@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ include "nginx-sample.fullname" . }}-stable
+  labels:
+    app: nginx-demo
+    {{- include "nginx-sample.labels" . | nindent 4 }}
+spec:
+  type: {{ .Values.service.type }}
+  ports:
+    - port: {{ .Values.service.port }}
+      targetPort: http
+      protocol: TCP
+      name: http
+  selector:
+    app: nginx-demo
+    {{- include "nginx-sample.selectorLabels" . | nindent 4 }}

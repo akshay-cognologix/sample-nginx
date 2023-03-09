@@ -1,0 +1,13 @@
+apiVersion: networking.istio.io/v1alpha3
+kind: DestinationRule
+metadata:
+  name: {{ include "nginx-sample.fullname" . }}-dr
+spec:
+  host: {{ include "nginx-sample.fullname" . }}-stable
+  subsets:
+  - name: stable
+    labels:
+      app: nginx-demo
+  - name: canary
+    labels:
+      app: nginx-demo
