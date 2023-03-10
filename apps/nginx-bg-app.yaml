@@ -1,0 +1,13 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+spec:
+  sources:
+  - repoURL: 'https://akshay-cognologix.github.io/helm-charts/charts'
+    chart: nginx-bg
+    targetRevision: 1.0.0
+    helm:
+      valueFiles:
+      - $values/values/nginx-bg/values-dev.yaml
+  - repoURL: 'https://github.com/akshay-cognologix/sample-nginx.git'
+    targetRevision: valuesyaml
+    ref: values
