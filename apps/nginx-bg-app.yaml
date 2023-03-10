@@ -1,6 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 spec:
+  project: default
   sources:
   - repoURL: 'https://akshay-cognologix.github.io/helm-charts/charts'
     chart: nginx-bg
