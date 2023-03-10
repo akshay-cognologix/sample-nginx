@@ -11,3 +11,6 @@ spec:
   - repoURL: 'https://github.com/akshay-cognologix/sample-nginx.git'
     targetRevision: valuesyaml
     ref: values
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: nginx
