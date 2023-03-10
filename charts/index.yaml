@@ -1,0 +1,14 @@
+apiVersion: v1
+entries:
+  nginx-hltr:
+  - apiVersion: v2
+    appVersion: 1.0.0
+    created: "2023-03-10T09:56:32.548520059+05:30"
+    description: A Helm chart for Kubernetes
+    digest: 2c459ecb536499e5ce8c0ada74bc71229947e15071e4e234e452a6f77d3ec42b
+    name: nginx-hltr
+    type: application
+    urls:
+    - https://github.com/akshay-cognologix/sample-nginx.git/nginx-hltr-1.0.0.tgz
+    version: 1.0.0
+generated: "2023-03-10T09:56:32.548022205+05:30"
