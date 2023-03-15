@@ -1,5 +1,6 @@
-replicaCount: 3
+replicaCount: 2
 
 service:
-  type: ClusterIP
+  #type: ClusterIP
+  type: NodePort
   port: 80
